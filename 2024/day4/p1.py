@@ -1,5 +1,4 @@
-INPUT_FILE = 'input2.txt'
-
+INPUT_FILE = './inputs/input.txt'
 
 def safesearch(_y, _x):
     try:
@@ -8,7 +7,6 @@ def safesearch(_y, _x):
         return wordsearch[_y][_x]
     except IndexError:
         return '.'
-
 
 with open(INPUT_FILE, 'r') as f:
     wordsearch = [line.strip() for line in f.readlines()]
@@ -26,4 +24,5 @@ for y0 in range(y):
                 ''.join([safesearch(y0-i, x0-i) for i in range(4)]))
 
 xmas_count = to_check.count('XMAS') + to_check.count('SAMX')
+
 print(xmas_count)

@@ -1,6 +1,6 @@
 from math import floor
 
-INPUT_FILE = 'input2.txt'
+INPUT_FILE = './inputs/input.txt'
 
 def sort_pages(pages):
     new_pages = []
@@ -24,5 +24,6 @@ for pages in prints:
     pages = pages.split(',')
     if pages != (new_pages := sort_pages(pages)):
         page_sum += int(new_pages[floor(len(new_pages) / 2)])
+        
 print(page_sum)
             

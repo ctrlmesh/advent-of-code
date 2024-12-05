@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-INPUT_FILE = 'input2.txt'
+INPUT_FILE = './inputs/input.txt'
 
 safe_count = 0
 with open(INPUT_FILE, 'r') as f:

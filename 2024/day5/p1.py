@@ -1,6 +1,6 @@
 from math import floor
 
-INPUT_FILE = 'input2.txt'
+INPUT_FILE = './inputs/input.txt'
 
 with open(INPUT_FILE, 'r') as f:
     rules, prints = (block.split() for block in f.read().split('\n\n'))
@@ -15,5 +15,6 @@ for pages in prints:
                 break
     else:
         page_sum += int(pages[floor(len(pages) / 2)])
+        
 print(page_sum)
             

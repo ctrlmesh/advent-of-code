@@ -1,5 +1,4 @@
-#!/usr/bin/env python3
-INPUT_FILE = 'input2.txt'
+INPUT_FILE = './inputs/input.txt'
 
 def is_proper(arr):
     arr = [int(n) for n in arr]
