@@ -5,10 +5,13 @@ INPUT_FILE = './inputs/input.txt'
 
 def compute_possible_product(calc):
     product, numbers = calc
-    for calc in itertools.product('+*', repeat=len(numbers)-1):
+    for calc in itertools.product('+*|', repeat=len(numbers)-1):
         prev = numbers[0]
         for n, operator in zip(numbers[1:], calc):
-            prev = eval(f'{prev}{operator}{n}')
+            if operator == '|':
+                prev = int(f'{prev}{n}')
+            else:
+                prev = eval(f'{prev}{operator}{n}')
         if prev == product:
             return product
     return 0
